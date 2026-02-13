@@ -1,0 +1,53 @@
+.student-overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.student-card {
+  background: white;
+  width: 100%;
+  max-width: 450px;
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 18px;
+  padding: 15px;
+}
+
+.student-card h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.chat-bubble {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.chat-bubble img,
+.chat-bubble video {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.chat-bubble a {
+  display: inline-block;
+  margin-top: 8px;
+  color: blue;
+}
+
+.time {
+  display: block;
+  font-size: 11px;
+  color: gray;
+  text-align: right;
+  margin-top: 5px;
+}

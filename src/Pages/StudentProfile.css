@@ -1,0 +1,150 @@
+/* FULL SCREEN MODAL */
+.profile-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* BACKDROP BLUR */
+.profile-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.5);
+}
+
+/* CENTER CARD */
+.profile-card {
+  position: relative;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  padding: 30px 40px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+  color: white;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ef4444;
+  transform: scale(1.2);
+}
+
+/* PROFILE PHOTO */
+.profile-photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.profile-photo img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #2563eb;
+  object-fit: cover;
+  box-shadow: 0 15px 40px rgba(37,99,235,0.6);
+}
+
+/* ROWS */
+.profile-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.profile-row:last-child {
+  border-bottom: none;
+}
+
+/* LABEL + VALUE */
+.label {
+  font-weight: 600;
+  color: #cbd5e1;
+  flex: 1;
+}
+
+.value {
+  flex: 2;
+  color: white;
+  font-weight: 500;
+}
+
+/* EDIT ICON */
+.edit-icon {
+  cursor: pointer;
+  color: #2563eb;
+  transition: 0.3s ease;
+}
+
+.edit-icon:hover {
+  color: #1d4ed8;
+  transform: scale(1.2);
+}
+
+/* INPUT FIELD */
+input[type="text"] {
+  flex: 2;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* SAVE BUTTON */
+.save-btn {
+  padding: 5px 12px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #10b981, #047857);
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: 0.3s ease;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(16,185,129,0.5);
+}
+
+/* LOADING */
+.loading {
+  color: white;
+  font-size: 20px;
+  margin-top: 50px;
+  text-align: center;
+}

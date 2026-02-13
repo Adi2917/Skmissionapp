@@ -1,0 +1,114 @@
+.student-dashboard-wrapper {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1e3a8a, #0f172a);
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  padding: 25px;
+  gap: 25px;
+}
+
+/* Upper Half */
+.student-top {
+  flex: 1;
+  background: rgba(17, 24, 39, 0.95);
+  border-radius: 20px;
+  display: flex;
+  padding: 25px;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.student-image-box img {
+  width: 150px;
+  height: 150px;
+  border-radius: 18px;
+  object-fit: cover;
+  border: 3px solid #3b82f6;
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.student-info h2 {
+  font-size: 26px;
+  color: #93c5fd;
+  margin: 0;
+}
+
+.class-roll {
+  display: flex;
+  gap: 25px;
+  font-size: 15px;
+  color: #cbd5e1;
+}
+
+.detail-btn {
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.detail-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37,99,235,0.4);
+}
+
+/* Lower Half */
+.student-bottom {
+  flex: 1;
+  display: flex;
+  gap: 25px;
+}
+
+.card {
+  flex: 1;
+  background: rgba(17, 24, 39, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.card h3 {
+  color: #93c5fd;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+}
+
+.fees-card:hover {
+  border: 1px solid #22c55e;
+}
+
+.result-card:hover {
+  border: 1px solid #facc15;
+}
+
+.loading {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+  color: white;
+}

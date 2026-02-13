@@ -1,0 +1,120 @@
+.choice-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  font-family: "Inter", sans-serif;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Background Glow */
+.choice-bg-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(37,99,235,0.35), transparent 70%);
+  filter: blur(100px);
+  animation: floatGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatGlow {
+  from { transform: translateY(-20px); }
+  to { transform: translateY(20px); }
+}
+
+/* Card */
+.choice-card {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 28px;
+  padding: 45px 30px 35px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+  position: relative;
+  z-index: 2;
+}
+
+/* Logo */
+.choice-logo img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 30px rgba(37,99,235,0.7);
+}
+
+/* Title */
+.choice-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* Description */
+.choice-desc {
+  font-size: 14px;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.choice-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn-primary,
+.btn-outline {
+  height: 50px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(37,99,235,0.6);
+}
+
+/* Outline Button */
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* Divider */
+.choice-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin: 30px 0 15px;
+}
+
+/* Footer */
+.choice-footer {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+}
