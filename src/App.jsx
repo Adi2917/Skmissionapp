@@ -14,6 +14,8 @@ import StudentFees from "./Pages/StudentFees";
 import AdminStudentFees from "./Pages/AdminStudentFees";
 import StudentNotification from "./Pages/StudentNotification";
 import AdminStudentNotification from "./Pages/AdminStudentNotification";
+import AdminStudentResult from "./Pages/AdminStudentResult";
+import StudentResult from "./Pages/StudentResult";
 
 import MainLayout from "./Layout/MainLayout";
 
@@ -24,8 +26,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/Home" element={<Home />} />
 
-      {/* App pages – WITH header */}
-      {/*<Route element={<MainLayout />}> */}
+      {/* Pages WITH Layout */}
+      <Route element={<MainLayout />}>
 
         <Route path="/StudentChoice" element={<StudentChoice />} />
         <Route path="/StudentRegister" element={<StudentRegister />} />
@@ -42,18 +44,29 @@ function App() {
         <Route path="/AdminStudentFees/:id" element={<AdminStudentFees />} />
         <Route path="/StudentFees/:id" element={<StudentFees />} />
 
-        {/* 🔥 FIXED NOTIFICATION ROUTES */}
-        <Route 
-          path="/StudentNotification/:id" 
-          element={<StudentNotification />} 
+        {/* 🔥 RESULT ROUTES ADDED */}
+        <Route
+          path="/AdminStudentResult/:studentId"
+          element={<AdminStudentResult />}
         />
 
-        <Route 
-          path="/AdminStudentNotification" 
-          element={<AdminStudentNotification />} 
+        <Route
+          path="/StudentResult/:id"
+          element={<StudentResult />}
         />
 
-      {/*</Route> */}
+        {/* 🔔 Notifications */}
+        <Route
+          path="/StudentNotification/:id"
+          element={<StudentNotification />}
+        />
+
+        <Route
+          path="/AdminStudentNotification"
+          element={<AdminStudentNotification />}
+        />
+
+      </Route>
     </Routes>
   );
 }
