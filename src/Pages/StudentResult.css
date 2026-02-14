@@ -1,48 +1,470 @@
-.result-wrapper {
-  padding: 40px;
-  display: flex;
-  justify-content: center;
+/* ===================== */
+/* RESULT PAGE */
+/* ===================== */
+
+.result-page{
+
+min-height:100vh;
+background:#eef2f7;
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:30px 15px;
+font-family:Arial, Helvetica, sans-serif;
+
 }
 
-.result-card {
-  width: 700px;
-  padding: 30px;
-  border: 2px solid #000;
-  text-align: center;
-  background: #fff;
+
+/* ===================== */
+/* TITLE */
+/* ===================== */
+
+.page-title{
+
+font-size:26px;
+font-weight:bold;
+margin-bottom:20px;
+color:#1e3a8a;
+
 }
 
-.logo {
-  width: 90px;
-  margin-bottom: 10px;
+
+/* ===================== */
+/* EXAM BUTTONS */
+/* ===================== */
+
+.exam-btn-box{
+
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+
+.exam-btn{
+
+padding:12px 25px;
+background:linear-gradient(145deg,#2563eb,#1e40af);
+color:white;
+border:none;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+
 }
 
-th, td {
-  border: 1px solid #000;
-  padding: 8px;
+
+.exam-btn:hover{
+
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
 }
 
-.summary {
-  margin-top: 20px;
-  font-weight: bold;
+
+
+/* ===================== */
+/* OVERLAY */
+/* ===================== */
+
+.overlay{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.6);
+
+backdrop-filter:blur(8px);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:20px;
+
+z-index:999;
+
 }
 
-.print-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #16a34a;
-  color: white;
-  border: none;
-  cursor: pointer;
+
+
+/* ===================== */
+/* MARKSHEET */
+/* ===================== */
+
+.marksheet{
+
+background:white;
+
+width:380px;
+max-width:95%;
+
+padding:25px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,0.4);
+
+position:relative;
+
+animation:popup 0.3s ease;
+
 }
 
-.contact {
-  margin-top: 20px;
-  font-weight: bold;
+
+/* popup animation */
+
+@keyframes popup{
+
+from{
+
+transform:scale(0.8);
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+opacity:1;
+
+}
+
+}
+
+
+
+/* ===================== */
+/* CLOSE ICON */
+/* ===================== */
+
+.close{
+
+position:absolute;
+
+right:15px;
+top:15px;
+
+font-size:22px;
+
+color:red;
+
+cursor:pointer;
+
+background:white;
+
+border-radius:50%;
+
+padding:6px;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+
+transition:0.2s;
+
+}
+
+
+.close:hover{
+
+transform:scale(1.2);
+
+}
+
+
+
+/* ===================== */
+/* LOGO */
+/* ===================== */
+
+.school-logo{
+
+width:70px;
+margin-bottom:5px;
+
+}
+
+
+/* ===================== */
+
+.school-name{
+
+margin:5px 0;
+font-size:20px;
+font-weight:bold;
+color:#111;
+
+}
+
+
+/* ===================== */
+
+.exam-title{
+
+margin-bottom:15px;
+color:#2563eb;
+font-size:18px;
+font-weight:bold;
+
+}
+
+
+
+/* ===================== */
+/* TABLE */
+/* ===================== */
+
+.table{
+
+margin-top:15px;
+border-radius:10px;
+overflow:hidden;
+border:1px solid #ddd;
+
+}
+
+
+/* row */
+
+.row{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:12px;
+
+font-size:15px;
+
+border-bottom:1px solid #ddd;
+
+}
+
+
+/* last row */
+
+.row:last-child{
+
+border-bottom:none;
+
+}
+
+
+/* header */
+
+.header{
+
+background:#2563eb;
+color:white;
+font-weight:bold;
+
+}
+
+
+/* subject */
+
+.row div:first-child{
+
+width:70%;
+text-align:left;
+
+}
+
+
+/* marks */
+
+.row div:last-child{
+
+width:30%;
+text-align:right;
+
+}
+
+
+
+/* ===================== */
+/* SUMMARY */
+/* ===================== */
+
+.summary{
+
+margin-top:15px;
+
+font-size:16px;
+
+font-weight:bold;
+
+color:#111;
+
+}
+
+
+
+/* ===================== */
+/* PRINT BUTTON */
+/* ===================== */
+
+.print{
+
+margin-top:20px;
+
+padding:12px 30px;
+
+background:linear-gradient(145deg,#16a34a,#15803d);
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+
+}
+
+
+.print:hover{
+
+transform:translateY(-2px);
+
+}
+
+
+
+/* ===================== */
+/* MOBILE */
+/* ===================== */
+
+@media(max-width:600px){
+
+.marksheet{
+
+width:100%;
+padding:20px;
+
+}
+
+}
+
+
+
+/* ===================== */
+/* PRINT FINAL FIX */
+/* ===================== */
+
+@media print{
+
+
+body *{
+
+visibility:hidden;
+
+}
+
+
+/* show only marksheet */
+
+.marksheet,
+.marksheet *{
+
+visibility:visible;
+
+}
+
+
+/* remove overlay */
+
+.overlay{
+
+position:static;
+background:none;
+
+}
+
+
+/* perfect center */
+
+.marksheet{
+
+position:relative;
+
+margin:0 auto;
+
+width:340px;
+
+max-width:340px;
+
+box-shadow:none;
+
+border:none;
+
+padding:15px;
+
+}
+
+
+/* center alignment */
+
+.row div:first-child{
+
+width:65%;
+text-align:left;
+
+}
+
+.row div:last-child{
+
+width:35%;
+text-align:right;
+
+}
+
+
+/* hide buttons */
+
+.close,
+.print{
+
+display:none;
+
+}
+
+
+/* remove extra space */
+
+html,body{
+
+margin:0;
+padding:0;
+
+overflow:hidden;
+
+}
+
+
+/* single page */
+
+@page{
+
+size:A4 portrait;
+
+margin:0;
+
+}
+
+
+
 }

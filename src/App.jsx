@@ -51,7 +51,7 @@ function App() {
         />
 
         <Route
-          path="/StudentResult/:id"
+          path="/studentresult/:studentId"
           element={<StudentResult />}
         />
 
